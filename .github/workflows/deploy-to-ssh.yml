@@ -22,7 +22,7 @@ jobs:
 
       - name: Sync files to Hostinger
         run: |
-          rsync -az --delete \
+          rsync -az \
             -e "ssh -p ${{ secrets.HOSTINGER_PORT }}" \
             --exclude '.git/' \
             --exclude '.github/' \
